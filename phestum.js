@@ -71,7 +71,7 @@ var phestum = {
             throw("! " + JSON.stringify(a) + " == " + JSON.stringify(b));
         }
     },
-    
+
     assertFail : function (func) {
         var failed = false;
         try {
@@ -79,7 +79,7 @@ var phestum = {
         } catch (e) {
             failed = true;
         }
-        
+
         if (!failed) {
             throw("'phestum.assertFail' error. Given function didn't failed.");
         }
@@ -87,7 +87,7 @@ var phestum = {
 };
 */}).toString().match(/\/\*([^]*)\*\//)[1];
 
-eval(phestumLib);
+// eval(phestumLib);
 
 
 // tests/files
@@ -219,7 +219,7 @@ page.evaluate(function () {
             console.log("finished phestum tests.");
             return;
         }
-        
+
         var testName = Object.keys(tests)[0];
         var test = tests[testName];
         delete tests[testName];
@@ -255,5 +255,5 @@ page.evaluate(function () {
         }
     }
     recurTests(tests);
-    
+
 });
